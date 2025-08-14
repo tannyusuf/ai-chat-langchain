@@ -27,6 +27,6 @@ class Spinner:
         self.running = False
         if self.thread:
             self.thread.join(timeout=0.1)
-        # Satırı temizle
+
         sys.stdout.write("\r" + " " * (len(self.message) + 10) + "\r")
         sys.stdout.flush()

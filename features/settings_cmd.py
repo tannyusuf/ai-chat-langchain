@@ -13,15 +13,7 @@ def _parse_on_off(val: str) -> Tuple[bool, bool]:
 
 def make_handlers(brain):
     def set_handle(state, console, args):
-        """
-        /set <key> <value>
-        Keys:
-          - model <id>              (örn: llama3.2:3b)
-          - temp <float>            (örn: 0.6)
-          - memory on|off
-          - web on|off
-          - stream on|off
-        """
+
         if len(args) < 2:
             console.print_sys("Kullanım: /set <model|temp|memory|web|stream> <değer>")
             return

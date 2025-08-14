@@ -19,11 +19,5 @@ class Console:
         prompt_text = f"{username} > "
         return self.session.prompt(prompt_text, completer=self.completer)
 
-    # def print_user(self, text: str):
-    #    print(f"You > {text}")
-
-    # def print_bot(self, text: str):
-    #    print(f"Bot > {text}")
-
     def print_sys(self, text: str):
         print(f"System > {text}")

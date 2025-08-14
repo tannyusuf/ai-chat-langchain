@@ -12,16 +12,10 @@ class ChatState:
             "temperature": 0.6,
             "use_memory": True,
             "use_web": False,  # web tool (Tavily) kapalı başlasın
-            "stream": True,  # akışlı çıktı
+            "stream": True,
         }
     )
 
     def append_message(self, role: str, content: str):
 
         self.messages.append({"role": role, "content": content, "ts": datetime.now()})
-
-    # def last_message(self):
-
-    #    if self.messages:
-    #        return self.messages[-1]
-    #    return None
